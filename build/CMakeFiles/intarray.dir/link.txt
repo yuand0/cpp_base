@@ -1,0 +1,2 @@
+/usr/bin/ar qc libintarray.a CMakeFiles/intarray.dir/src/intarray.cpp.o
+/usr/bin/ranlib libintarray.a
