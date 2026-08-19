@@ -1,5 +1,8 @@
 /home/yuandu/cpp_base/build/CMakeFiles/intarray.dir
+/home/yuandu/cpp_base/build/CMakeFiles/thread_pool.dir
 /home/yuandu/cpp_base/build/CMakeFiles/test_intarray.dir
+/home/yuandu/cpp_base/build/CMakeFiles/word_counter.dir
+/home/yuandu/cpp_base/build/CMakeFiles/cpp_core.dir
 /home/yuandu/cpp_base/build/CMakeFiles/test.dir
 /home/yuandu/cpp_base/build/CMakeFiles/edit_cache.dir
 /home/yuandu/cpp_base/build/CMakeFiles/rebuild_cache.dir
@@ -32,3 +35,10 @@
 /home/yuandu/cpp_base/build/_deps/googletest-build/googletest/CMakeFiles/install.dir
 /home/yuandu/cpp_base/build/_deps/googletest-build/googletest/CMakeFiles/install/local.dir
 /home/yuandu/cpp_base/build/_deps/googletest-build/googletest/CMakeFiles/install/strip.dir
+/home/yuandu/cpp_base/build/pybind11/CMakeFiles/test.dir
+/home/yuandu/cpp_base/build/pybind11/CMakeFiles/edit_cache.dir
+/home/yuandu/cpp_base/build/pybind11/CMakeFiles/rebuild_cache.dir
+/home/yuandu/cpp_base/build/pybind11/CMakeFiles/list_install_components.dir
+/home/yuandu/cpp_base/build/pybind11/CMakeFiles/install.dir
+/home/yuandu/cpp_base/build/pybind11/CMakeFiles/install/local.dir
+/home/yuandu/cpp_base/build/pybind11/CMakeFiles/install/strip.dir

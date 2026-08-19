@@ -45,6 +45,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/yuandu/cpp_base/build/_deps/googletest-build/cmake_install.cmake")
+  include("/home/yuandu/cpp_base/build/pybind11/cmake_install.cmake")
 
 endif()
 
