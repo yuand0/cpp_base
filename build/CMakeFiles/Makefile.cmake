@@ -175,8 +175,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/intarray.dir/DependInfo.cmake"
   "CMakeFiles/thread_pool.dir/DependInfo.cmake"
+  "CMakeFiles/thread_safe_stack.dir/DependInfo.cmake"
   "CMakeFiles/test_intarray.dir/DependInfo.cmake"
-  "CMakeFiles/word_counter.dir/DependInfo.cmake"
   "CMakeFiles/cpp_core.dir/DependInfo.cmake"
   "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"

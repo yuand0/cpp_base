@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -O0 -g CMakeFiles/word_counter.dir/benchmarks/word_counter.cpp.o -o word_counter  libthread_pool.a 

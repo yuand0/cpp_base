@@ -16,11 +16,20 @@ target_include_directories(intarray PUBLIC include)
 add_library(thread_pool src/thread_pool.cpp)
 target_include_directories(thread_pool PUBLIC include)
 
-add_executable(test_intarray tests/test_intarray.cpp tests/test_thread_pool.cpp)
-target_link_libraries(test_intarray intarray thread_pool gtest_main)
+add_library(thread_safe_stack src/thread_safe_stack.cpp)
+target_include_directories(thread_safe_stack PUBLIC include)
 
-add_executable(word_counter benchmarks/word_counter.cpp)
-target_link_libraries(word_counter thread_pool)
+add_executable(test_intarray 
+    tests/test_intarray.cpp 
+    tests/test_thread_pool.cpp 
+    tests/test_thread_safe_stack.cpp
+)
+target_link_libraries(test_intarray 
+    intarray 
+    thread_pool 
+    thread_safe_stack 
+    gtest_main
+)
 
 enable_testing()
 

@@ -198,6 +198,19 @@ thread_pool/fast:
 .PHONY : thread_pool/fast
 
 #=============================================================================
+# Target rules for targets named thread_safe_stack
+
+# Build rule for target.
+thread_safe_stack: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thread_safe_stack
+.PHONY : thread_safe_stack
+
+# fast build rule for target.
+thread_safe_stack/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thread_safe_stack.dir/build.make CMakeFiles/thread_safe_stack.dir/build
+.PHONY : thread_safe_stack/fast
+
+#=============================================================================
 # Target rules for targets named test_intarray
 
 # Build rule for target.
@@ -209,19 +222,6 @@ test_intarray: cmake_check_build_system
 test_intarray/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intarray.dir/build.make CMakeFiles/test_intarray.dir/build
 .PHONY : test_intarray/fast
-
-#=============================================================================
-# Target rules for targets named word_counter
-
-# Build rule for target.
-word_counter: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 word_counter
-.PHONY : word_counter
-
-# fast build rule for target.
-word_counter/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/word_counter.dir/build.make CMakeFiles/word_counter.dir/build
-.PHONY : word_counter/fast
 
 #=============================================================================
 # Target rules for targets named cpp_core
@@ -287,30 +287,6 @@ gtest_main: cmake_check_build_system
 gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
-
-benchmarks/word_counter.o: benchmarks/word_counter.cpp.o
-.PHONY : benchmarks/word_counter.o
-
-# target to build an object file
-benchmarks/word_counter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/word_counter.dir/build.make CMakeFiles/word_counter.dir/benchmarks/word_counter.cpp.o
-.PHONY : benchmarks/word_counter.cpp.o
-
-benchmarks/word_counter.i: benchmarks/word_counter.cpp.i
-.PHONY : benchmarks/word_counter.i
-
-# target to preprocess a source file
-benchmarks/word_counter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/word_counter.dir/build.make CMakeFiles/word_counter.dir/benchmarks/word_counter.cpp.i
-.PHONY : benchmarks/word_counter.cpp.i
-
-benchmarks/word_counter.s: benchmarks/word_counter.cpp.s
-.PHONY : benchmarks/word_counter.s
-
-# target to generate assembly for a file
-benchmarks/word_counter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/word_counter.dir/build.make CMakeFiles/word_counter.dir/benchmarks/word_counter.cpp.s
-.PHONY : benchmarks/word_counter.cpp.s
 
 python/bindings.o: python/bindings.cpp.o
 .PHONY : python/bindings.o
@@ -384,6 +360,30 @@ src/thread_pool.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/thread_pool.dir/build.make CMakeFiles/thread_pool.dir/src/thread_pool.cpp.s
 .PHONY : src/thread_pool.cpp.s
 
+src/thread_safe_stack.o: src/thread_safe_stack.cpp.o
+.PHONY : src/thread_safe_stack.o
+
+# target to build an object file
+src/thread_safe_stack.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thread_safe_stack.dir/build.make CMakeFiles/thread_safe_stack.dir/src/thread_safe_stack.cpp.o
+.PHONY : src/thread_safe_stack.cpp.o
+
+src/thread_safe_stack.i: src/thread_safe_stack.cpp.i
+.PHONY : src/thread_safe_stack.i
+
+# target to preprocess a source file
+src/thread_safe_stack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thread_safe_stack.dir/build.make CMakeFiles/thread_safe_stack.dir/src/thread_safe_stack.cpp.i
+.PHONY : src/thread_safe_stack.cpp.i
+
+src/thread_safe_stack.s: src/thread_safe_stack.cpp.s
+.PHONY : src/thread_safe_stack.s
+
+# target to generate assembly for a file
+src/thread_safe_stack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thread_safe_stack.dir/build.make CMakeFiles/thread_safe_stack.dir/src/thread_safe_stack.cpp.s
+.PHONY : src/thread_safe_stack.cpp.s
+
 tests/test_intarray.o: tests/test_intarray.cpp.o
 .PHONY : tests/test_intarray.o
 
@@ -432,6 +432,30 @@ tests/test_thread_pool.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intarray.dir/build.make CMakeFiles/test_intarray.dir/tests/test_thread_pool.cpp.s
 .PHONY : tests/test_thread_pool.cpp.s
 
+tests/test_thread_safe_stack.o: tests/test_thread_safe_stack.cpp.o
+.PHONY : tests/test_thread_safe_stack.o
+
+# target to build an object file
+tests/test_thread_safe_stack.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intarray.dir/build.make CMakeFiles/test_intarray.dir/tests/test_thread_safe_stack.cpp.o
+.PHONY : tests/test_thread_safe_stack.cpp.o
+
+tests/test_thread_safe_stack.i: tests/test_thread_safe_stack.cpp.i
+.PHONY : tests/test_thread_safe_stack.i
+
+# target to preprocess a source file
+tests/test_thread_safe_stack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intarray.dir/build.make CMakeFiles/test_intarray.dir/tests/test_thread_safe_stack.cpp.i
+.PHONY : tests/test_thread_safe_stack.cpp.i
+
+tests/test_thread_safe_stack.s: tests/test_thread_safe_stack.cpp.s
+.PHONY : tests/test_thread_safe_stack.s
+
+# target to generate assembly for a file
+tests/test_thread_safe_stack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intarray.dir/build.make CMakeFiles/test_intarray.dir/tests/test_thread_safe_stack.cpp.s
+.PHONY : tests/test_thread_safe_stack.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -453,10 +477,7 @@ help:
 	@echo "... intarray"
 	@echo "... test_intarray"
 	@echo "... thread_pool"
-	@echo "... word_counter"
-	@echo "... benchmarks/word_counter.o"
-	@echo "... benchmarks/word_counter.i"
-	@echo "... benchmarks/word_counter.s"
+	@echo "... thread_safe_stack"
 	@echo "... python/bindings.o"
 	@echo "... python/bindings.i"
 	@echo "... python/bindings.s"
@@ -466,12 +487,18 @@ help:
 	@echo "... src/thread_pool.o"
 	@echo "... src/thread_pool.i"
 	@echo "... src/thread_pool.s"
+	@echo "... src/thread_safe_stack.o"
+	@echo "... src/thread_safe_stack.i"
+	@echo "... src/thread_safe_stack.s"
 	@echo "... tests/test_intarray.o"
 	@echo "... tests/test_intarray.i"
 	@echo "... tests/test_intarray.s"
 	@echo "... tests/test_thread_pool.o"
 	@echo "... tests/test_thread_pool.i"
 	@echo "... tests/test_thread_pool.s"
+	@echo "... tests/test_thread_safe_stack.o"
+	@echo "... tests/test_thread_safe_stack.i"
+	@echo "... tests/test_thread_safe_stack.s"
 .PHONY : help
 
 

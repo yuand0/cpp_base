@@ -1,0 +1,2 @@
+/usr/bin/ar qc libthread_safe_stack.a CMakeFiles/thread_safe_stack.dir/src/thread_safe_stack.cpp.o
+/usr/bin/ranlib libthread_safe_stack.a

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/yuandu/cpp_base/benchmarks/word_counter.cpp" "CMakeFiles/word_counter.dir/benchmarks/word_counter.cpp.o" "gcc" "CMakeFiles/word_counter.dir/benchmarks/word_counter.cpp.o.d"
+  "/home/yuandu/cpp_base/src/thread_safe_stack.cpp" "CMakeFiles/thread_safe_stack.dir/src/thread_safe_stack.cpp.o" "gcc" "CMakeFiles/thread_safe_stack.dir/src/thread_safe_stack.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

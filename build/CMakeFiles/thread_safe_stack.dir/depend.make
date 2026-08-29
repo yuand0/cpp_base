@@ -1,2 +1,2 @@
-# Empty dependencies file for word_counter.
+# Empty dependencies file for thread_safe_stack.
 # This may be replaced when dependencies are built.
