@@ -37,3 +37,4 @@ enable_testing()
 add_subdirectory(pybind11)
 pybind11_add_module(cpp_core python/bindings.cpp)
 target_link_libraries(cpp_core PRIVATE intarray)
+
