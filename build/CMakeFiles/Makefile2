@@ -235,11 +235,11 @@ CMakeFiles/thread_safe_stack.dir/clean:
 # Target rules for target CMakeFiles/test_intarray.dir
 
 # All Build rule for target.
-CMakeFiles/test_intarray.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/test_intarray.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 CMakeFiles/test_intarray.dir/all: CMakeFiles/intarray.dir/all
 CMakeFiles/test_intarray.dir/all: CMakeFiles/thread_pool.dir/all
 CMakeFiles/test_intarray.dir/all: CMakeFiles/thread_safe_stack.dir/all
+CMakeFiles/test_intarray.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intarray.dir/build.make CMakeFiles/test_intarray.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intarray.dir/build.make CMakeFiles/test_intarray.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yuandu/cpp_base/build/CMakeFiles --progress-num=13,14,15,16 "Built target test_intarray"
@@ -266,6 +266,7 @@ CMakeFiles/test_intarray.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/cpp_core.dir/all: CMakeFiles/intarray.dir/all
+CMakeFiles/cpp_core.dir/all: CMakeFiles/thread_safe_stack.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_core.dir/build.make CMakeFiles/cpp_core.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_core.dir/build.make CMakeFiles/cpp_core.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yuandu/cpp_base/build/CMakeFiles --progress-num=1,2 "Built target cpp_core"
@@ -273,7 +274,7 @@ CMakeFiles/cpp_core.dir/all: CMakeFiles/intarray.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/cpp_core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuandu/cpp_base/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuandu/cpp_base/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cpp_core.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuandu/cpp_base/build/CMakeFiles 0
 .PHONY : CMakeFiles/cpp_core.dir/rule
@@ -317,8 +318,8 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean:
 # Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yuandu/cpp_base/build/CMakeFiles --progress-num=5,6 "Built target gmock_main"

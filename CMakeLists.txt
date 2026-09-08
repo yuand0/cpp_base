@@ -36,5 +36,4 @@ enable_testing()
 # pybind11 绑定
 add_subdirectory(pybind11)
 pybind11_add_module(cpp_core python/bindings.cpp)
-target_link_libraries(cpp_core PRIVATE intarray)
-
+target_link_libraries(cpp_core PRIVATE intarray thread_safe_stack)

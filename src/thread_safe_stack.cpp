@@ -8,14 +8,14 @@ void ThreadSafeStack<T>::push(T value) {
 }
 
 template<typename T>
-std::shared_ptr<T> ThreadSafeStack<T>::pop() {
+std::optional<T> ThreadSafeStack<T>::pop() {
     std::lock_guard<std::mutex> lock(mutex_);
     if (stack_.empty()) {
-        return nullptr;
+        return std::nullopt;
     }
-    auto result = std::make_shared<T>(std::move(stack_.top()));
+    T value = std::move(stack_.top());
     stack_.pop();
-    return result;
+    return value;
 }
 
 template<typename T>
@@ -32,5 +32,5 @@ bool ThreadSafeStack<T>::empty() const {
     return stack_.empty();
 }
 
-// 显式实例化
+// 显式实例化 int 版本
 template class ThreadSafeStack<int>;
