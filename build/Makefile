@@ -211,6 +211,19 @@ thread_safe_stack/fast:
 .PHONY : thread_safe_stack/fast
 
 #=============================================================================
+# Target rules for targets named tokenizer
+
+# Build rule for target.
+tokenizer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tokenizer
+.PHONY : tokenizer
+
+# fast build rule for target.
+tokenizer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer.dir/build.make CMakeFiles/tokenizer.dir/build
+.PHONY : tokenizer/fast
+
+#=============================================================================
 # Target rules for targets named test_intarray
 
 # Build rule for target.
@@ -384,6 +397,30 @@ src/thread_safe_stack.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/thread_safe_stack.dir/build.make CMakeFiles/thread_safe_stack.dir/src/thread_safe_stack.cpp.s
 .PHONY : src/thread_safe_stack.cpp.s
 
+src/tokenizer.o: src/tokenizer.cpp.o
+.PHONY : src/tokenizer.o
+
+# target to build an object file
+src/tokenizer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer.dir/build.make CMakeFiles/tokenizer.dir/src/tokenizer.cpp.o
+.PHONY : src/tokenizer.cpp.o
+
+src/tokenizer.i: src/tokenizer.cpp.i
+.PHONY : src/tokenizer.i
+
+# target to preprocess a source file
+src/tokenizer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer.dir/build.make CMakeFiles/tokenizer.dir/src/tokenizer.cpp.i
+.PHONY : src/tokenizer.cpp.i
+
+src/tokenizer.s: src/tokenizer.cpp.s
+.PHONY : src/tokenizer.s
+
+# target to generate assembly for a file
+src/tokenizer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer.dir/build.make CMakeFiles/tokenizer.dir/src/tokenizer.cpp.s
+.PHONY : src/tokenizer.cpp.s
+
 tests/test_intarray.o: tests/test_intarray.cpp.o
 .PHONY : tests/test_intarray.o
 
@@ -456,6 +493,30 @@ tests/test_thread_safe_stack.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intarray.dir/build.make CMakeFiles/test_intarray.dir/tests/test_thread_safe_stack.cpp.s
 .PHONY : tests/test_thread_safe_stack.cpp.s
 
+tests/test_tokenizer.o: tests/test_tokenizer.cpp.o
+.PHONY : tests/test_tokenizer.o
+
+# target to build an object file
+tests/test_tokenizer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intarray.dir/build.make CMakeFiles/test_intarray.dir/tests/test_tokenizer.cpp.o
+.PHONY : tests/test_tokenizer.cpp.o
+
+tests/test_tokenizer.i: tests/test_tokenizer.cpp.i
+.PHONY : tests/test_tokenizer.i
+
+# target to preprocess a source file
+tests/test_tokenizer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intarray.dir/build.make CMakeFiles/test_intarray.dir/tests/test_tokenizer.cpp.i
+.PHONY : tests/test_tokenizer.cpp.i
+
+tests/test_tokenizer.s: tests/test_tokenizer.cpp.s
+.PHONY : tests/test_tokenizer.s
+
+# target to generate assembly for a file
+tests/test_tokenizer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intarray.dir/build.make CMakeFiles/test_intarray.dir/tests/test_tokenizer.cpp.s
+.PHONY : tests/test_tokenizer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -478,6 +539,7 @@ help:
 	@echo "... test_intarray"
 	@echo "... thread_pool"
 	@echo "... thread_safe_stack"
+	@echo "... tokenizer"
 	@echo "... python/bindings.o"
 	@echo "... python/bindings.i"
 	@echo "... python/bindings.s"
@@ -490,6 +552,9 @@ help:
 	@echo "... src/thread_safe_stack.o"
 	@echo "... src/thread_safe_stack.i"
 	@echo "... src/thread_safe_stack.s"
+	@echo "... src/tokenizer.o"
+	@echo "... src/tokenizer.i"
+	@echo "... src/tokenizer.s"
 	@echo "... tests/test_intarray.o"
 	@echo "... tests/test_intarray.i"
 	@echo "... tests/test_intarray.s"
@@ -499,6 +564,9 @@ help:
 	@echo "... tests/test_thread_safe_stack.o"
 	@echo "... tests/test_thread_safe_stack.i"
 	@echo "... tests/test_thread_safe_stack.s"
+	@echo "... tests/test_tokenizer.o"
+	@echo "... tests/test_tokenizer.i"
+	@echo "... tests/test_tokenizer.s"
 .PHONY : help
 
 

@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test_intarray.dir/tests/test_thread_pool.cpp.o.d"
   "CMakeFiles/test_intarray.dir/tests/test_thread_safe_stack.cpp.o"
   "CMakeFiles/test_intarray.dir/tests/test_thread_safe_stack.cpp.o.d"
+  "CMakeFiles/test_intarray.dir/tests/test_tokenizer.cpp.o"
+  "CMakeFiles/test_intarray.dir/tests/test_tokenizer.cpp.o.d"
   "test_intarray"
   "test_intarray.pdb"
 )

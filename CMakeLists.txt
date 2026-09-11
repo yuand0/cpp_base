@@ -19,15 +19,20 @@ target_include_directories(thread_pool PUBLIC include)
 add_library(thread_safe_stack src/thread_safe_stack.cpp)
 target_include_directories(thread_safe_stack PUBLIC include)
 
+add_library(tokenizer src/tokenizer.cpp)
+target_include_directories(tokenizer PUBLIC include)
+
 add_executable(test_intarray 
     tests/test_intarray.cpp 
     tests/test_thread_pool.cpp 
     tests/test_thread_safe_stack.cpp
+    tests/test_tokenizer.cpp
 )
 target_link_libraries(test_intarray 
     intarray 
     thread_pool 
     thread_safe_stack 
+    tokenizer 
     gtest_main
 )
 
