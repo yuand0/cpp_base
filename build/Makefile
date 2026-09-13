@@ -250,6 +250,19 @@ cpp_core/fast:
 .PHONY : cpp_core/fast
 
 #=============================================================================
+# Target rules for targets named tokenizer_benchmark
+
+# Build rule for target.
+tokenizer_benchmark: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tokenizer_benchmark
+.PHONY : tokenizer_benchmark
+
+# fast build rule for target.
+tokenizer_benchmark/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer_benchmark.dir/build.make CMakeFiles/tokenizer_benchmark.dir/build
+.PHONY : tokenizer_benchmark/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -300,6 +313,30 @@ gtest_main: cmake_check_build_system
 gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
+
+benchmarks/tokenizer_benchmark.o: benchmarks/tokenizer_benchmark.cpp.o
+.PHONY : benchmarks/tokenizer_benchmark.o
+
+# target to build an object file
+benchmarks/tokenizer_benchmark.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer_benchmark.dir/build.make CMakeFiles/tokenizer_benchmark.dir/benchmarks/tokenizer_benchmark.cpp.o
+.PHONY : benchmarks/tokenizer_benchmark.cpp.o
+
+benchmarks/tokenizer_benchmark.i: benchmarks/tokenizer_benchmark.cpp.i
+.PHONY : benchmarks/tokenizer_benchmark.i
+
+# target to preprocess a source file
+benchmarks/tokenizer_benchmark.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer_benchmark.dir/build.make CMakeFiles/tokenizer_benchmark.dir/benchmarks/tokenizer_benchmark.cpp.i
+.PHONY : benchmarks/tokenizer_benchmark.cpp.i
+
+benchmarks/tokenizer_benchmark.s: benchmarks/tokenizer_benchmark.cpp.s
+.PHONY : benchmarks/tokenizer_benchmark.s
+
+# target to generate assembly for a file
+benchmarks/tokenizer_benchmark.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer_benchmark.dir/build.make CMakeFiles/tokenizer_benchmark.dir/benchmarks/tokenizer_benchmark.cpp.s
+.PHONY : benchmarks/tokenizer_benchmark.cpp.s
 
 python/bindings.o: python/bindings.cpp.o
 .PHONY : python/bindings.o
@@ -540,6 +577,10 @@ help:
 	@echo "... thread_pool"
 	@echo "... thread_safe_stack"
 	@echo "... tokenizer"
+	@echo "... tokenizer_benchmark"
+	@echo "... benchmarks/tokenizer_benchmark.o"
+	@echo "... benchmarks/tokenizer_benchmark.i"
+	@echo "... benchmarks/tokenizer_benchmark.s"
 	@echo "... python/bindings.o"
 	@echo "... python/bindings.i"
 	@echo "... python/bindings.s"

@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -O0 -g CMakeFiles/tokenizer_benchmark.dir/benchmarks/tokenizer_benchmark.cpp.o -o tokenizer_benchmark  libtokenizer.a 

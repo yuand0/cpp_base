@@ -633,14 +633,13 @@ _Python_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=581aa2c5bf9acd98756ff5645dbd9873
 _Python_DEVELOPMENT_MODULE_SIGNATURE:INTERNAL=868bb2231d9576cd1646be00bb9f9a71
 //Development reason failure
 _Python_Development_REASON_FAILURE:INTERNAL=
-//Path to a program.
 _Python_EXECUTABLE:INTERNAL=/usr/bin/python3
-//Path to a file.
 _Python_INCLUDE_DIR:INTERNAL=/usr/include/python3.12
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;3;64;;cpython-312-x86_64-linux-gnu;abi3;/usr/lib/python3.12;/usr/lib/python3.12;/usr/local/lib/python3.12/dist-packages;/usr/local/lib/python3.12/dist-packages
 _Python_INTERPRETER_SIGNATURE:INTERNAL=6f29914ca016e42c7f4754125095aa7f
-//Path to a library.
+//Interpreter reason failure
+_Python_Interpreter_REASON_FAILURE:INTERNAL=
 _Python_LIBRARY_RELEASE:INTERNAL=/usr/lib/x86_64-linux-gnu/libpython3.12.so
 //NumPy reason failure
 _Python_NumPy_REASON_FAILURE:INTERNAL=
