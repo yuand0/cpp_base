@@ -1,1 +1,1 @@
-/usr/bin/c++ -fPIC  -Wall -O0 -g -flto=auto -shared  -o cpp_core.cpython-312-x86_64-linux-gnu.so CMakeFiles/cpp_core.dir/python/bindings.cpp.o  libintarray.a libthread_safe_stack.a 
+/usr/bin/c++ -fPIC  -Wall -O0 -g -flto=auto -shared  -o cpp_core.cpython-312-x86_64-linux-gnu.so CMakeFiles/cpp_core.dir/python/bindings.cpp.o  libintarray.a libthread_safe_stack.a libtokenizer.a 

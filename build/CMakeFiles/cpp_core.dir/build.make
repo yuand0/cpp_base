@@ -94,6 +94,7 @@ cpp_core.cpython-312-x86_64-linux-gnu.so: CMakeFiles/cpp_core.dir/python/binding
 cpp_core.cpython-312-x86_64-linux-gnu.so: CMakeFiles/cpp_core.dir/build.make
 cpp_core.cpython-312-x86_64-linux-gnu.so: libintarray.a
 cpp_core.cpython-312-x86_64-linux-gnu.so: libthread_safe_stack.a
+cpp_core.cpython-312-x86_64-linux-gnu.so: libtokenizer.a
 cpp_core.cpython-312-x86_64-linux-gnu.so: CMakeFiles/cpp_core.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yuandu/cpp_base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module cpp_core.cpython-312-x86_64-linux-gnu.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cpp_core.dir/link.txt --verbose=$(VERBOSE)
