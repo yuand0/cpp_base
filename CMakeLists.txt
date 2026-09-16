@@ -45,3 +45,9 @@ target_link_libraries(cpp_core PRIVATE intarray thread_safe_stack tokenizer)
 
 add_executable(tokenizer_benchmark benchmarks/tokenizer_benchmark.cpp)
 target_link_libraries(tokenizer_benchmark tokenizer)
+
+add_library(cosine src/cosine.cpp)
+target_include_directories(cosine PUBLIC include)
+
+add_executable(cosine_benchmark benchmarks/cosine_benchmark.cpp)
+target_link_libraries(cosine_benchmark cosine)

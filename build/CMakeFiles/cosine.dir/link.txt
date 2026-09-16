@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcosine.a CMakeFiles/cosine.dir/src/cosine.cpp.o
+/usr/bin/ranlib libcosine.a

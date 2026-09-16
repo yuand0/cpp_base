@@ -98,6 +98,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_intarray.dir/DependInfo.cmake"
   "CMakeFiles/cpp_core.dir/DependInfo.cmake"
   "CMakeFiles/tokenizer_benchmark.dir/DependInfo.cmake"
+  "CMakeFiles/cosine.dir/DependInfo.cmake"
+  "CMakeFiles/cosine_benchmark.dir/DependInfo.cmake"
   "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"

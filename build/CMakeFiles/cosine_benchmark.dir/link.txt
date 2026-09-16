@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -O0 -g CMakeFiles/cosine_benchmark.dir/benchmarks/cosine_benchmark.cpp.o -o cosine_benchmark  libcosine.a 

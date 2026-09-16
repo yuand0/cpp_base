@@ -5,6 +5,8 @@
 /home/yuandu/cpp_base/build/CMakeFiles/test_intarray.dir
 /home/yuandu/cpp_base/build/CMakeFiles/cpp_core.dir
 /home/yuandu/cpp_base/build/CMakeFiles/tokenizer_benchmark.dir
+/home/yuandu/cpp_base/build/CMakeFiles/cosine.dir
+/home/yuandu/cpp_base/build/CMakeFiles/cosine_benchmark.dir
 /home/yuandu/cpp_base/build/CMakeFiles/test.dir
 /home/yuandu/cpp_base/build/CMakeFiles/edit_cache.dir
 /home/yuandu/cpp_base/build/CMakeFiles/rebuild_cache.dir

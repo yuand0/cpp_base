@@ -263,6 +263,32 @@ tokenizer_benchmark/fast:
 .PHONY : tokenizer_benchmark/fast
 
 #=============================================================================
+# Target rules for targets named cosine
+
+# Build rule for target.
+cosine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cosine
+.PHONY : cosine
+
+# fast build rule for target.
+cosine/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine.dir/build.make CMakeFiles/cosine.dir/build
+.PHONY : cosine/fast
+
+#=============================================================================
+# Target rules for targets named cosine_benchmark
+
+# Build rule for target.
+cosine_benchmark: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cosine_benchmark
+.PHONY : cosine_benchmark
+
+# fast build rule for target.
+cosine_benchmark/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine_benchmark.dir/build.make CMakeFiles/cosine_benchmark.dir/build
+.PHONY : cosine_benchmark/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -314,6 +340,30 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+benchmarks/cosine_benchmark.o: benchmarks/cosine_benchmark.cpp.o
+.PHONY : benchmarks/cosine_benchmark.o
+
+# target to build an object file
+benchmarks/cosine_benchmark.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine_benchmark.dir/build.make CMakeFiles/cosine_benchmark.dir/benchmarks/cosine_benchmark.cpp.o
+.PHONY : benchmarks/cosine_benchmark.cpp.o
+
+benchmarks/cosine_benchmark.i: benchmarks/cosine_benchmark.cpp.i
+.PHONY : benchmarks/cosine_benchmark.i
+
+# target to preprocess a source file
+benchmarks/cosine_benchmark.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine_benchmark.dir/build.make CMakeFiles/cosine_benchmark.dir/benchmarks/cosine_benchmark.cpp.i
+.PHONY : benchmarks/cosine_benchmark.cpp.i
+
+benchmarks/cosine_benchmark.s: benchmarks/cosine_benchmark.cpp.s
+.PHONY : benchmarks/cosine_benchmark.s
+
+# target to generate assembly for a file
+benchmarks/cosine_benchmark.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine_benchmark.dir/build.make CMakeFiles/cosine_benchmark.dir/benchmarks/cosine_benchmark.cpp.s
+.PHONY : benchmarks/cosine_benchmark.cpp.s
+
 benchmarks/tokenizer_benchmark.o: benchmarks/tokenizer_benchmark.cpp.o
 .PHONY : benchmarks/tokenizer_benchmark.o
 
@@ -361,6 +411,30 @@ python/bindings.s: python/bindings.cpp.s
 python/bindings.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_core.dir/build.make CMakeFiles/cpp_core.dir/python/bindings.cpp.s
 .PHONY : python/bindings.cpp.s
+
+src/cosine.o: src/cosine.cpp.o
+.PHONY : src/cosine.o
+
+# target to build an object file
+src/cosine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine.dir/build.make CMakeFiles/cosine.dir/src/cosine.cpp.o
+.PHONY : src/cosine.cpp.o
+
+src/cosine.i: src/cosine.cpp.i
+.PHONY : src/cosine.i
+
+# target to preprocess a source file
+src/cosine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine.dir/build.make CMakeFiles/cosine.dir/src/cosine.cpp.i
+.PHONY : src/cosine.cpp.i
+
+src/cosine.s: src/cosine.cpp.s
+.PHONY : src/cosine.s
+
+# target to generate assembly for a file
+src/cosine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine.dir/build.make CMakeFiles/cosine.dir/src/cosine.cpp.s
+.PHONY : src/cosine.cpp.s
 
 src/intarray.o: src/intarray.cpp.o
 .PHONY : src/intarray.o
@@ -567,6 +641,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... cosine"
+	@echo "... cosine_benchmark"
 	@echo "... cpp_core"
 	@echo "... gmock"
 	@echo "... gmock_main"
@@ -578,12 +654,18 @@ help:
 	@echo "... thread_safe_stack"
 	@echo "... tokenizer"
 	@echo "... tokenizer_benchmark"
+	@echo "... benchmarks/cosine_benchmark.o"
+	@echo "... benchmarks/cosine_benchmark.i"
+	@echo "... benchmarks/cosine_benchmark.s"
 	@echo "... benchmarks/tokenizer_benchmark.o"
 	@echo "... benchmarks/tokenizer_benchmark.i"
 	@echo "... benchmarks/tokenizer_benchmark.s"
 	@echo "... python/bindings.o"
 	@echo "... python/bindings.i"
 	@echo "... python/bindings.s"
+	@echo "... src/cosine.o"
+	@echo "... src/cosine.i"
+	@echo "... src/cosine.s"
 	@echo "... src/intarray.o"
 	@echo "... src/intarray.i"
 	@echo "... src/intarray.s"
