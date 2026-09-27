@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/yuandu/cpp_base/include
 
-CXX_FLAGS =  -Wall -O0 -g -std=gnu++17
+CXX_FLAGS =  -Wall -O0 -g -fPIC -std=gnu++17
 

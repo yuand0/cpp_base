@@ -224,6 +224,32 @@ tokenizer/fast:
 .PHONY : tokenizer/fast
 
 #=============================================================================
+# Target rules for targets named cosine
+
+# Build rule for target.
+cosine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cosine
+.PHONY : cosine
+
+# fast build rule for target.
+cosine/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine.dir/build.make CMakeFiles/cosine.dir/build
+.PHONY : cosine/fast
+
+#=============================================================================
+# Target rules for targets named calculator
+
+# Build rule for target.
+calculator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calculator
+.PHONY : calculator
+
+# fast build rule for target.
+calculator/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/build
+.PHONY : calculator/fast
+
+#=============================================================================
 # Target rules for targets named test_intarray
 
 # Build rule for target.
@@ -250,43 +276,17 @@ cpp_core/fast:
 .PHONY : cpp_core/fast
 
 #=============================================================================
-# Target rules for targets named tokenizer_benchmark
+# Target rules for targets named calculator_benchmark
 
 # Build rule for target.
-tokenizer_benchmark: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tokenizer_benchmark
-.PHONY : tokenizer_benchmark
+calculator_benchmark: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calculator_benchmark
+.PHONY : calculator_benchmark
 
 # fast build rule for target.
-tokenizer_benchmark/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer_benchmark.dir/build.make CMakeFiles/tokenizer_benchmark.dir/build
-.PHONY : tokenizer_benchmark/fast
-
-#=============================================================================
-# Target rules for targets named cosine
-
-# Build rule for target.
-cosine: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cosine
-.PHONY : cosine
-
-# fast build rule for target.
-cosine/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine.dir/build.make CMakeFiles/cosine.dir/build
-.PHONY : cosine/fast
-
-#=============================================================================
-# Target rules for targets named cosine_benchmark
-
-# Build rule for target.
-cosine_benchmark: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cosine_benchmark
-.PHONY : cosine_benchmark
-
-# fast build rule for target.
-cosine_benchmark/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine_benchmark.dir/build.make CMakeFiles/cosine_benchmark.dir/build
-.PHONY : cosine_benchmark/fast
+calculator_benchmark/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator_benchmark.dir/build.make CMakeFiles/calculator_benchmark.dir/build
+.PHONY : calculator_benchmark/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -340,53 +340,29 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-benchmarks/cosine_benchmark.o: benchmarks/cosine_benchmark.cpp.o
-.PHONY : benchmarks/cosine_benchmark.o
+benchmarks/calculator_benchmark.o: benchmarks/calculator_benchmark.cpp.o
+.PHONY : benchmarks/calculator_benchmark.o
 
 # target to build an object file
-benchmarks/cosine_benchmark.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine_benchmark.dir/build.make CMakeFiles/cosine_benchmark.dir/benchmarks/cosine_benchmark.cpp.o
-.PHONY : benchmarks/cosine_benchmark.cpp.o
+benchmarks/calculator_benchmark.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator_benchmark.dir/build.make CMakeFiles/calculator_benchmark.dir/benchmarks/calculator_benchmark.cpp.o
+.PHONY : benchmarks/calculator_benchmark.cpp.o
 
-benchmarks/cosine_benchmark.i: benchmarks/cosine_benchmark.cpp.i
-.PHONY : benchmarks/cosine_benchmark.i
-
-# target to preprocess a source file
-benchmarks/cosine_benchmark.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine_benchmark.dir/build.make CMakeFiles/cosine_benchmark.dir/benchmarks/cosine_benchmark.cpp.i
-.PHONY : benchmarks/cosine_benchmark.cpp.i
-
-benchmarks/cosine_benchmark.s: benchmarks/cosine_benchmark.cpp.s
-.PHONY : benchmarks/cosine_benchmark.s
-
-# target to generate assembly for a file
-benchmarks/cosine_benchmark.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine_benchmark.dir/build.make CMakeFiles/cosine_benchmark.dir/benchmarks/cosine_benchmark.cpp.s
-.PHONY : benchmarks/cosine_benchmark.cpp.s
-
-benchmarks/tokenizer_benchmark.o: benchmarks/tokenizer_benchmark.cpp.o
-.PHONY : benchmarks/tokenizer_benchmark.o
-
-# target to build an object file
-benchmarks/tokenizer_benchmark.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer_benchmark.dir/build.make CMakeFiles/tokenizer_benchmark.dir/benchmarks/tokenizer_benchmark.cpp.o
-.PHONY : benchmarks/tokenizer_benchmark.cpp.o
-
-benchmarks/tokenizer_benchmark.i: benchmarks/tokenizer_benchmark.cpp.i
-.PHONY : benchmarks/tokenizer_benchmark.i
+benchmarks/calculator_benchmark.i: benchmarks/calculator_benchmark.cpp.i
+.PHONY : benchmarks/calculator_benchmark.i
 
 # target to preprocess a source file
-benchmarks/tokenizer_benchmark.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer_benchmark.dir/build.make CMakeFiles/tokenizer_benchmark.dir/benchmarks/tokenizer_benchmark.cpp.i
-.PHONY : benchmarks/tokenizer_benchmark.cpp.i
+benchmarks/calculator_benchmark.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator_benchmark.dir/build.make CMakeFiles/calculator_benchmark.dir/benchmarks/calculator_benchmark.cpp.i
+.PHONY : benchmarks/calculator_benchmark.cpp.i
 
-benchmarks/tokenizer_benchmark.s: benchmarks/tokenizer_benchmark.cpp.s
-.PHONY : benchmarks/tokenizer_benchmark.s
+benchmarks/calculator_benchmark.s: benchmarks/calculator_benchmark.cpp.s
+.PHONY : benchmarks/calculator_benchmark.s
 
 # target to generate assembly for a file
-benchmarks/tokenizer_benchmark.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer_benchmark.dir/build.make CMakeFiles/tokenizer_benchmark.dir/benchmarks/tokenizer_benchmark.cpp.s
-.PHONY : benchmarks/tokenizer_benchmark.cpp.s
+benchmarks/calculator_benchmark.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator_benchmark.dir/build.make CMakeFiles/calculator_benchmark.dir/benchmarks/calculator_benchmark.cpp.s
+.PHONY : benchmarks/calculator_benchmark.cpp.s
 
 python/bindings.o: python/bindings.cpp.o
 .PHONY : python/bindings.o
@@ -411,6 +387,30 @@ python/bindings.s: python/bindings.cpp.s
 python/bindings.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_core.dir/build.make CMakeFiles/cpp_core.dir/python/bindings.cpp.s
 .PHONY : python/bindings.cpp.s
+
+src/calculator.o: src/calculator.cpp.o
+.PHONY : src/calculator.o
+
+# target to build an object file
+src/calculator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/calculator.cpp.o
+.PHONY : src/calculator.cpp.o
+
+src/calculator.i: src/calculator.cpp.i
+.PHONY : src/calculator.i
+
+# target to preprocess a source file
+src/calculator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/calculator.cpp.i
+.PHONY : src/calculator.cpp.i
+
+src/calculator.s: src/calculator.cpp.s
+.PHONY : src/calculator.s
+
+# target to generate assembly for a file
+src/calculator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/calculator.cpp.s
+.PHONY : src/calculator.cpp.s
 
 src/cosine.o: src/cosine.cpp.o
 .PHONY : src/cosine.o
@@ -532,6 +532,30 @@ src/tokenizer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer.dir/build.make CMakeFiles/tokenizer.dir/src/tokenizer.cpp.s
 .PHONY : src/tokenizer.cpp.s
 
+tests/test_calculator.o: tests/test_calculator.cpp.o
+.PHONY : tests/test_calculator.o
+
+# target to build an object file
+tests/test_calculator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intarray.dir/build.make CMakeFiles/test_intarray.dir/tests/test_calculator.cpp.o
+.PHONY : tests/test_calculator.cpp.o
+
+tests/test_calculator.i: tests/test_calculator.cpp.i
+.PHONY : tests/test_calculator.i
+
+# target to preprocess a source file
+tests/test_calculator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intarray.dir/build.make CMakeFiles/test_intarray.dir/tests/test_calculator.cpp.i
+.PHONY : tests/test_calculator.cpp.i
+
+tests/test_calculator.s: tests/test_calculator.cpp.s
+.PHONY : tests/test_calculator.s
+
+# target to generate assembly for a file
+tests/test_calculator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intarray.dir/build.make CMakeFiles/test_intarray.dir/tests/test_calculator.cpp.s
+.PHONY : tests/test_calculator.cpp.s
+
 tests/test_intarray.o: tests/test_intarray.cpp.o
 .PHONY : tests/test_intarray.o
 
@@ -641,8 +665,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... calculator"
+	@echo "... calculator_benchmark"
 	@echo "... cosine"
-	@echo "... cosine_benchmark"
 	@echo "... cpp_core"
 	@echo "... gmock"
 	@echo "... gmock_main"
@@ -653,16 +678,15 @@ help:
 	@echo "... thread_pool"
 	@echo "... thread_safe_stack"
 	@echo "... tokenizer"
-	@echo "... tokenizer_benchmark"
-	@echo "... benchmarks/cosine_benchmark.o"
-	@echo "... benchmarks/cosine_benchmark.i"
-	@echo "... benchmarks/cosine_benchmark.s"
-	@echo "... benchmarks/tokenizer_benchmark.o"
-	@echo "... benchmarks/tokenizer_benchmark.i"
-	@echo "... benchmarks/tokenizer_benchmark.s"
+	@echo "... benchmarks/calculator_benchmark.o"
+	@echo "... benchmarks/calculator_benchmark.i"
+	@echo "... benchmarks/calculator_benchmark.s"
 	@echo "... python/bindings.o"
 	@echo "... python/bindings.i"
 	@echo "... python/bindings.s"
+	@echo "... src/calculator.o"
+	@echo "... src/calculator.i"
+	@echo "... src/calculator.s"
 	@echo "... src/cosine.o"
 	@echo "... src/cosine.i"
 	@echo "... src/cosine.s"
@@ -678,6 +702,9 @@ help:
 	@echo "... src/tokenizer.o"
 	@echo "... src/tokenizer.i"
 	@echo "... src/tokenizer.s"
+	@echo "... tests/test_calculator.o"
+	@echo "... tests/test_calculator.i"
+	@echo "... tests/test_calculator.s"
 	@echo "... tests/test_intarray.o"
 	@echo "... tests/test_intarray.i"
 	@echo "... tests/test_intarray.s"

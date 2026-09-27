@@ -6,5 +6,5 @@ CXX_DEFINES = -Dcpp_core_EXPORTS
 
 CXX_INCLUDES = -I/home/yuandu/cpp_base/include -isystem /usr/include/python3.12 -isystem /home/yuandu/cpp_base/pybind11/include
 
-CXX_FLAGS =  -Wall -O0 -g -std=gnu++17 -fPIC -fvisibility=hidden -flto=auto -fno-fat-lto-objects
+CXX_FLAGS =  -Wall -O0 -g -fPIC -std=gnu++17 -fPIC -fvisibility=hidden -flto=auto -fno-fat-lto-objects
 

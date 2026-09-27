@@ -3,6 +3,7 @@
 
 CMakeFiles/cpp_core.dir/python/bindings.cpp.o
  /home/yuandu/cpp_base/python/bindings.cpp
+ /home/yuandu/cpp_base/include/calculator.h
  /home/yuandu/cpp_base/include/intarray.h
  /home/yuandu/cpp_base/include/thread_safe_stack.h
  /home/yuandu/cpp_base/include/tokenizer.h
