@@ -276,6 +276,19 @@ cpp_core/fast:
 .PHONY : cpp_core/fast
 
 #=============================================================================
+# Target rules for targets named cosine_benchmark
+
+# Build rule for target.
+cosine_benchmark: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cosine_benchmark
+.PHONY : cosine_benchmark
+
+# fast build rule for target.
+cosine_benchmark/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine_benchmark.dir/build.make CMakeFiles/cosine_benchmark.dir/build
+.PHONY : cosine_benchmark/fast
+
+#=============================================================================
 # Target rules for targets named calculator_benchmark
 
 # Build rule for target.
@@ -287,6 +300,32 @@ calculator_benchmark: cmake_check_build_system
 calculator_benchmark/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator_benchmark.dir/build.make CMakeFiles/calculator_benchmark.dir/build
 .PHONY : calculator_benchmark/fast
+
+#=============================================================================
+# Target rules for targets named tokenizer_benchmark
+
+# Build rule for target.
+tokenizer_benchmark: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tokenizer_benchmark
+.PHONY : tokenizer_benchmark
+
+# fast build rule for target.
+tokenizer_benchmark/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer_benchmark.dir/build.make CMakeFiles/tokenizer_benchmark.dir/build
+.PHONY : tokenizer_benchmark/fast
+
+#=============================================================================
+# Target rules for targets named benchmark_suite
+
+# Build rule for target.
+benchmark_suite: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 benchmark_suite
+.PHONY : benchmark_suite
+
+# fast build rule for target.
+benchmark_suite/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_suite.dir/build.make CMakeFiles/benchmark_suite.dir/build
+.PHONY : benchmark_suite/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -340,6 +379,30 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+benchmarks/benchmark_main.o: benchmarks/benchmark_main.cpp.o
+.PHONY : benchmarks/benchmark_main.o
+
+# target to build an object file
+benchmarks/benchmark_main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_suite.dir/build.make CMakeFiles/benchmark_suite.dir/benchmarks/benchmark_main.cpp.o
+.PHONY : benchmarks/benchmark_main.cpp.o
+
+benchmarks/benchmark_main.i: benchmarks/benchmark_main.cpp.i
+.PHONY : benchmarks/benchmark_main.i
+
+# target to preprocess a source file
+benchmarks/benchmark_main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_suite.dir/build.make CMakeFiles/benchmark_suite.dir/benchmarks/benchmark_main.cpp.i
+.PHONY : benchmarks/benchmark_main.cpp.i
+
+benchmarks/benchmark_main.s: benchmarks/benchmark_main.cpp.s
+.PHONY : benchmarks/benchmark_main.s
+
+# target to generate assembly for a file
+benchmarks/benchmark_main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/benchmark_suite.dir/build.make CMakeFiles/benchmark_suite.dir/benchmarks/benchmark_main.cpp.s
+.PHONY : benchmarks/benchmark_main.cpp.s
+
 benchmarks/calculator_benchmark.o: benchmarks/calculator_benchmark.cpp.o
 .PHONY : benchmarks/calculator_benchmark.o
 
@@ -363,6 +426,54 @@ benchmarks/calculator_benchmark.s: benchmarks/calculator_benchmark.cpp.s
 benchmarks/calculator_benchmark.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator_benchmark.dir/build.make CMakeFiles/calculator_benchmark.dir/benchmarks/calculator_benchmark.cpp.s
 .PHONY : benchmarks/calculator_benchmark.cpp.s
+
+benchmarks/cosine_benchmark.o: benchmarks/cosine_benchmark.cpp.o
+.PHONY : benchmarks/cosine_benchmark.o
+
+# target to build an object file
+benchmarks/cosine_benchmark.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine_benchmark.dir/build.make CMakeFiles/cosine_benchmark.dir/benchmarks/cosine_benchmark.cpp.o
+.PHONY : benchmarks/cosine_benchmark.cpp.o
+
+benchmarks/cosine_benchmark.i: benchmarks/cosine_benchmark.cpp.i
+.PHONY : benchmarks/cosine_benchmark.i
+
+# target to preprocess a source file
+benchmarks/cosine_benchmark.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine_benchmark.dir/build.make CMakeFiles/cosine_benchmark.dir/benchmarks/cosine_benchmark.cpp.i
+.PHONY : benchmarks/cosine_benchmark.cpp.i
+
+benchmarks/cosine_benchmark.s: benchmarks/cosine_benchmark.cpp.s
+.PHONY : benchmarks/cosine_benchmark.s
+
+# target to generate assembly for a file
+benchmarks/cosine_benchmark.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cosine_benchmark.dir/build.make CMakeFiles/cosine_benchmark.dir/benchmarks/cosine_benchmark.cpp.s
+.PHONY : benchmarks/cosine_benchmark.cpp.s
+
+benchmarks/tokenizer_benchmark.o: benchmarks/tokenizer_benchmark.cpp.o
+.PHONY : benchmarks/tokenizer_benchmark.o
+
+# target to build an object file
+benchmarks/tokenizer_benchmark.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer_benchmark.dir/build.make CMakeFiles/tokenizer_benchmark.dir/benchmarks/tokenizer_benchmark.cpp.o
+.PHONY : benchmarks/tokenizer_benchmark.cpp.o
+
+benchmarks/tokenizer_benchmark.i: benchmarks/tokenizer_benchmark.cpp.i
+.PHONY : benchmarks/tokenizer_benchmark.i
+
+# target to preprocess a source file
+benchmarks/tokenizer_benchmark.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer_benchmark.dir/build.make CMakeFiles/tokenizer_benchmark.dir/benchmarks/tokenizer_benchmark.cpp.i
+.PHONY : benchmarks/tokenizer_benchmark.cpp.i
+
+benchmarks/tokenizer_benchmark.s: benchmarks/tokenizer_benchmark.cpp.s
+.PHONY : benchmarks/tokenizer_benchmark.s
+
+# target to generate assembly for a file
+benchmarks/tokenizer_benchmark.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokenizer_benchmark.dir/build.make CMakeFiles/tokenizer_benchmark.dir/benchmarks/tokenizer_benchmark.cpp.s
+.PHONY : benchmarks/tokenizer_benchmark.cpp.s
 
 python/bindings.o: python/bindings.cpp.o
 .PHONY : python/bindings.o
@@ -665,9 +776,11 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... benchmark_suite"
 	@echo "... calculator"
 	@echo "... calculator_benchmark"
 	@echo "... cosine"
+	@echo "... cosine_benchmark"
 	@echo "... cpp_core"
 	@echo "... gmock"
 	@echo "... gmock_main"
@@ -678,9 +791,19 @@ help:
 	@echo "... thread_pool"
 	@echo "... thread_safe_stack"
 	@echo "... tokenizer"
+	@echo "... tokenizer_benchmark"
+	@echo "... benchmarks/benchmark_main.o"
+	@echo "... benchmarks/benchmark_main.i"
+	@echo "... benchmarks/benchmark_main.s"
 	@echo "... benchmarks/calculator_benchmark.o"
 	@echo "... benchmarks/calculator_benchmark.i"
 	@echo "... benchmarks/calculator_benchmark.s"
+	@echo "... benchmarks/cosine_benchmark.o"
+	@echo "... benchmarks/cosine_benchmark.i"
+	@echo "... benchmarks/cosine_benchmark.s"
+	@echo "... benchmarks/tokenizer_benchmark.o"
+	@echo "... benchmarks/tokenizer_benchmark.i"
+	@echo "... benchmarks/tokenizer_benchmark.s"
 	@echo "... python/bindings.o"
 	@echo "... python/bindings.i"
 	@echo "... python/bindings.s"

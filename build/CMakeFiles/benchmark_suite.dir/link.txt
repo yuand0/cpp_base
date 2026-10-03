@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -O0 -g -fPIC CMakeFiles/benchmark_suite.dir/benchmarks/benchmark_main.cpp.o -o benchmark_suite  libintarray.a libthread_safe_stack.a libtokenizer.a libcalculator.a libcosine.a /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.8.3 

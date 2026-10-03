@@ -352,6 +352,9 @@ Python_INCLUDE_DIR:FILEPATH=/usr/include/python3.12
 //Python Library
 Python_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpython3.12.so
 
+//The directory containing a CMake configuration file for benchmark.
+benchmark_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/benchmark
+
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/yuandu/cpp_base/build/_deps/googletest-build/googlemock
 

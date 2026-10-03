@@ -10,6 +10,7 @@ FetchContent_Declare(googletest
 )
 FetchContent_MakeAvailable(googletest)
 
+# ========== 核心库 ==========
 add_library(intarray src/intarray.cpp)
 target_include_directories(intarray PUBLIC include)
 
@@ -28,6 +29,7 @@ target_include_directories(cosine PUBLIC include)
 add_library(calculator src/calculator.cpp)
 target_include_directories(calculator PUBLIC include)
 
+# ========== 单元测试 ==========
 add_executable(test_intarray 
     tests/test_intarray.cpp 
     tests/test_thread_pool.cpp 
@@ -36,23 +38,29 @@ add_executable(test_intarray
     tests/test_calculator.cpp
 )
 target_link_libraries(test_intarray 
-    intarray 
-    thread_pool 
-    thread_safe_stack 
-    tokenizer 
-    cosine
-    calculator
-    gtest_main
+    intarray thread_pool thread_safe_stack tokenizer cosine calculator gtest_main
 )
 
 enable_testing()
 
+# ========== pybind11 绑定 ==========
 add_subdirectory(pybind11)
 pybind11_add_module(cpp_core python/bindings.cpp)
 target_link_libraries(cpp_core PRIVATE intarray thread_safe_stack tokenizer calculator)
 
-add_executable(calculator_benchmark benchmarks/calculator_benchmark.cpp)
-target_link_libraries(calculator_benchmark calculator)
+# ========== 性能测试 ==========
+add_executable(cosine_benchmark benchmarks/cosine_benchmark.cpp)
+target_link_libraries(cosine_benchmark cosine)
 
 add_executable(calculator_benchmark benchmarks/calculator_benchmark.cpp)
 target_link_libraries(calculator_benchmark calculator)
+
+add_executable(tokenizer_benchmark benchmarks/tokenizer_benchmark.cpp)
+target_link_libraries(tokenizer_benchmark tokenizer)
+
+# ========== Google Benchmark 套件 ==========
+find_package(benchmark REQUIRED)
+add_executable(benchmark_suite benchmarks/benchmark_main.cpp)
+target_link_libraries(benchmark_suite 
+    intarray thread_safe_stack tokenizer calculator cosine benchmark::benchmark
+)
