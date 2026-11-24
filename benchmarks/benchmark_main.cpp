@@ -30,6 +30,14 @@ static void BM_IntArray_Move(benchmark::State& state) {
 }
 BENCHMARK(BM_IntArray_Move)->Range(1024, 1<<20)->Complexity();
 
+static void BM_IntArray_Construct(benchmark::State& state) {
+  for (auto _ : state) {
+    IntArray a(state.range(0));
+    benchmark::DoNotOptimize(a);
+  }
+}
+BENCHMARK(BM_IntArray_Construct)->Range(1024, 1 << 20);
+
 // ========== Tokenizer ==========
 static void BM_Tokenizer(benchmark::State& state) {
     std::unordered_set<std::string> dict = {"你好", "世界", "中国", "人民", "计算机", "科学"};

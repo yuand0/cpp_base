@@ -1,25 +1,22 @@
----------------------------------------------------------------------
-Benchmark                           Time             CPU   Iterations
----------------------------------------------------------------------
-BM_IntArray_Copy/1024            54.8 ns         54.8 ns     12344538
-BM_IntArray_Copy/4096             117 ns          117 ns      5544808
-BM_IntArray_Copy/32768           2157 ns         2154 ns       331411
-BM_IntArray_Copy/262144         16367 ns        16365 ns        44012
-BM_IntArray_Copy/1048576       175523 ns       175513 ns         3546
-BM_IntArray_Copy_BigO            0.00 N^2        0.00 N^2  
-BM_IntArray_Copy_RMS                7 %             7 %    
-BM_IntArray_Move/1024             587 ns          587 ns      1172002
-BM_IntArray_Move/4096            2046 ns         2044 ns       337125
-BM_IntArray_Move/32768          22291 ns        22293 ns        32248
-BM_IntArray_Move/262144        284497 ns       284463 ns         2626
-BM_IntArray_Move/1048576      1221004 ns      1219764 ns          524
-BM_IntArray_Move_BigO            0.06 NlgN       0.06 NlgN 
-BM_IntArray_Move_RMS                2 %             2 %    
-BM_Tokenizer                  1222149 ns      1222018 ns          593 bytes_per_second=14.0474Mi/s
-BM_Cosine/128                     674 ns          674 ns      1071993
-BM_Cosine/512                    2823 ns         2823 ns       252617
-BM_Cosine/4096                  20158 ns        20155 ns        32391
-BM_Cosine_BigO                   4.93 N          4.93 N    
-BM_Cosine_RMS                       2 %             2 %    
-BM_Calculator                     557 ns          557 ns      1263240
-BM_ThreadSafeStack_PushPop       63.2 ns         63.2 ns     10440129
+------------------------------------------------------------------------
+Benchmark                              Time             CPU   Iterations
+------------------------------------------------------------------------
+BM_IntArray_Copy/1024               39.0 ns         42.5 ns     16888571
+BM_IntArray_Copy/4096               98.9 ns          108 ns      6220933
+BM_IntArray_Copy/32768              2021 ns         2205 ns       321819
+BM_IntArray_Copy/262144            15768 ns        17200 ns        39922
+BM_IntArray_Copy/1048576          169008 ns       184367 ns         3712
+BM_IntArray_Copy_BigO               0.00 N^2        0.00 N^2  
+BM_IntArray_Copy_RMS                   7 %             7 %    
+BM_IntArray_Move/1024               35.1 ns         38.3 ns     18184180
+BM_IntArray_Move/4096               77.1 ns         84.1 ns      8428549
+BM_IntArray_Move/32768              1058 ns         1154 ns       609225
+BM_IntArray_Move/262144            13241 ns        14444 ns        48508
+BM_IntArray_Move/1048576           74317 ns        81072 ns         8420
+BM_IntArray_Move_BigO               0.00 NlgN       0.00 NlgN 
+BM_IntArray_Move_RMS                   9 %             9 %    
+BM_IntArray_Construct/1024          35.4 ns         38.6 ns     18388869
+BM_IntArray_Construct/4096          75.4 ns         82.2 ns      8656940
+BM_IntArray_Construct/32768         1052 ns         1148 ns       603067
+BM_IntArray_Construct/262144       13275 ns        14481 ns        46828
+BM_IntArray_Construct/1048576      73959 ns        80676 ns         8468
